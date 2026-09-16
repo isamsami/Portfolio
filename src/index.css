@@ -1,7 +1,7 @@
 :root {
   --text: #6b6375;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: #995555;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
@@ -30,6 +30,7 @@
   }
 }
 
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -50,9 +51,6 @@
   }
 }
 
-body {
-  margin: 0;
-}
 
 #root {
   width: 1126px;
@@ -110,15 +108,40 @@ code {
   background: var(--code-bg);
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 145%;
+  letter-spacing: 0.18px;
+  color: var(--text);
+  background: var(rgb(64, 64, 97));
+}
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 4rem 15%;
+  background: rgba(0, 0, 0, 0.03);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
 }
+
+#menu-icon{
+  font-size: 3.5rem;
+  color: var(--text);
+  display: none;
+}
+
